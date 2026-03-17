@@ -1,7 +1,7 @@
 module test;
   int b;
   function reg [3:0] calc(input int a);
-    int temp;
+    int temp = 10;  //initializing local  variable insid function else the simulator would decide wheather to take x or 0
     begin
       calc = temp + 5;
       temp = calc;
@@ -16,3 +16,5 @@ module test;
     $display(" b = %0d", b);
   end
 endmodule 
+
+//output : 15,20,25
